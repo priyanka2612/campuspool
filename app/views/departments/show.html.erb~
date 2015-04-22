@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dept name:</strong>
+  <%= @department.dept_name %>
+</p>
+
+<p>
+  <strong>Dept no:</strong>
+  <%= @department.dept_no %>
+</p>
+
+<%= link_to 'listing departments', departments_path %>
+
+
+<%= link_to 'Edit', edit_department_path(@department) %> |
+<%= link_to 'Back', departments_path %>

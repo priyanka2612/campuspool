@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @consultant.Name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @consultant.Address %>
+</p>
+
+<p>
+  <strong>Contact no:</strong>
+  <%= @consultant.Contact_no %>
+</p>
+
+<p>
+  <strong>Marketing_contact_person:</strong>
+  <%= @consultant.Marketing_contact_person %>
+</p>
+
+<%= link_to 'Edit', edit_consultant_path(@consultant) %> |
+

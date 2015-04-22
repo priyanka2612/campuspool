@@ -1,0 +1,42 @@
+
+
+<h1>Consultants list</h1>
+ 
+<p>Displaying Products with name "<%= params[:name] %>"</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Contact no</th>
+      <th>Marketing contact person</th>
+      <th>Support contact person</th>  
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consultants.each do |consultant| %>
+      <tr>
+        <td><%= consultant.Name %></td>
+        <td><%= consultant.Address %></td>
+        <td><%= consultant.Contact_no %></td>
+        <td><%= consultant.Marketing_contact_person %></td>
+        <td><%= consultant.Support_contact_person %></td>
+        <td><%= link_to 'Edit', edit_consultant_path(consultant) %></td> 
+       <td><%= button_to "Delete", {:controller => :consultants, :action => 'destroy', :id => consultant.id }, {:confirm => 'Are you sure?',:method => :delete} %></td>
+
+  <%= form_tag(search_consultants_path, {:method => :get} ) do %>
+  <%= label_tag("name", "Search by consultant name:") %>
+  <%= text_field_tag("name") %>
+  <%= submit_tag("Search") %>
+       
+   <% end %>
+</tr>
+ <% end %>
+  </tbody>
+</table>
+
+
+
+

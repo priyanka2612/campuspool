@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Departments Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dept name</th>
+      <th>Dept no</th>
+     </tr>
+  </thead>
+
+  <tbody>
+
+    <% @departments.each do |department| %>
+
+      <tr>
+        <td><%= department.dept_name %></td>
+        <td><%= department.dept_no %></td>
+        <td><%= link_to 'Edit',edit_department_path(department) %></td> 
+        <td><%= button_to "Delete", {:controller => :departments, :action => 'destroy', :id => department.id }, :method => :delete %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<br>
+
+

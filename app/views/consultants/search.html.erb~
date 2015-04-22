@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Contact no</th>
+      <th>Marketing contact person</th>
+      <th>Support contact person</th>  
+    </tr>
+  </thead>
+<tbody>
+    <% @consultants.each do |consultant| %>
+      <tr>
+        <td><%= consultant.Name %></td>
+        <td><%= consultant.Address %></td>
+        <td><%= consultant.Contact_no %></td>
+        <td><%= consultant.Marketing_contact_person %></td>
+        <td><%= consultant.Support_contact_person %></td>
+        <td><%= link_to 'Show', product_path(product.id) %></td>
+  </tr>
+ </tbody>
+<% end %>
+</table>
+
