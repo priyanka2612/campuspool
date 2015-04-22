@@ -17,7 +17,7 @@
       <tr>
         <td><%= department.dept_name %></td>
         <td><%= department.dept_no %></td>
-        <td><%= button_to 'Edit',edit_department_path(department) %></td> 
+        <td><%= link_to 'Edit',edit_department_path(department) %></td> 
         <td><%= button_to "Delete", {:controller => :departments, :action => 'destroy', :id => department.id }, :method => :delete %></td>
       </tr>
     <% end %>
