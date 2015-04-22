@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Departments Lists</h1>
+<h1>lists of department</h1>
 
 <table>
   <thead>
